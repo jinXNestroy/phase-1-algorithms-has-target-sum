@@ -1,6 +1,19 @@
 function hasTargetSum(array, target) {
+
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[i] + array[j] === target) {
+        return true
+      }
+
+    }
+
+  }
   // Write your algorithm here
+  return false
 }
+
+console.log(hasTargetSum([3, 8, 12, 4, 11, 7], 10))
 
 /* 
   Write the Big O time complexity of your function here
@@ -8,6 +21,10 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  Iterate over the array 
+  Add the current index to each different one
+  compare with the target
+  return true or false
 */
 
 /*
